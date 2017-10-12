@@ -1,0 +1,31 @@
+CREATE TABLE CATEGORIES(
+id int NOT NULL PRIMARY KEY,
+name varchar2(255) NOT NULL,
+season varchar2(255) NOT NULL
+);
+
+CREATE TABLE PRODUCTS(
+id int NOT NULL PRIMARY KEY,
+name varchar2(255) NOT NULL,
+reference varchar2(255) NOT NULL,
+price decimal (10,3),
+category_id int
+);
+
+CREATE TABLE ANSWERS(
+id int NOT NULL PRIMARY KEY,
+number_of_question  varchar2(255) NOT NULL,
+answer varchar2(255)
+);
+
+
+INSERT INTO ANSWERS (id,number_of_question,answer) VALUES (1, 'QUESTION_1', 'CUATRO');
+INSERT INTO ANSWERS (id,number_of_question,answer) VALUES (2, 'QUESTION_2', 0.03);
+INSERT INTO ANSWERS (id,number_of_question,answer) VALUES (3, 'QUESTION_3', '8F03A38B-E011-E814-1A68-145FF0C9F7BD');
+INSERT INTO ANSWERS (id,number_of_question,answer) VALUES (4, 'QUESTION_4', 'congue turpis. In');
+INSERT INTO ANSWERS (id,number_of_question,answer) VALUES (5, 'QUESTION_5', 'running wear');
+
+SELECT * FROM CATEGORIES;
+SELECT * FROM PRODUCTS;
+SELECT * FROM ANSWERS;
+
